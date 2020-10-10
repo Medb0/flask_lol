@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../static/css/bootstrap.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/4q.css')}}">
+    <title>전적검색</title>
+
+</head>
+
+<body>
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="./">ㅎㅅㄱ</a>
+
+        <div class="collapse navbar-collapse" id="navbarColor01"></div>
+        <form class="form-inline my-2 my-lg-0" action="/search">
+            <input class="form-control mr-sm-2" type="text" name="name" placeholder="Search">
+            <input class="btn btn-secondary my-2 my-sm-0" type="submit"></button>
+        </form>
+        </div>
+    </nav>
+
+    <div class="input-group" style="display: inline-block;">
+        <form action="/search">
+            <input class="form-control form-control-lg" type="text" name="name" style="margin:5%; width: 80%; " />
+            <span><input class="btn btn-secondary my-2 my-sm-0" type="submit" value="Submit" /></span>
+        </form>
+    </div> -->
+    
+    <video autoplay muted loop id="myVideo">
+        <source src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/ko-kr/production/ko-kr/static/hero-0632cbf2872c5cc0dffa93d2ae8a29e8.webm" type="video/webm">
+    </video>
+
+    <div class="search-box">
+        <form action="/search">
+            <input type="text" name="name" placeholder=" " /><span></span>
+        </form>
+    </div>
+</body>
+
+<script>
+    var searchBox = document.querySelectorAll(
+        '.search-box input[type="text"] + span'
+    );
+
+    searchBox.forEach((elm) => {
+        elm.addEventListener("click", () => {
+            elm.previousElementSibling.value = "";
+        });
+    });
+
+</script>
+
+
+</html>
